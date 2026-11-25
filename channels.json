@@ -1,0 +1,6 @@
+[
+  { "name": "کانال بله",   "platform": "bale",   "chat_id": "@your_bale_channel" },
+  { "name": "کانال ایتا",  "platform": "eitaa",  "chat_id": "your_eitaa_channel_id" },
+  { "name": "کانال روبیکا", "platform": "rubika", "chat_id": "your_rubika_channel_guid" },
+  { "name": "کانال چهارم", "platform": "bale",   "chat_id": "@another_channel" }
+]
