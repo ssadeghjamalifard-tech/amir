@@ -1,0 +1,25 @@
+name: ارسال پیام به همه کانال‌ها
+
+on:
+  workflow_dispatch:
+    inputs:
+      message:
+        description: "متن پیام"
+        required: true
+        type: string
+
+jobs:
+  send:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Send
+        env:
+          MESSAGE: ${{ inputs.message }}
+          BALE_TOKEN: ${{ secrets.BALE_TOKEN }}
+          EITAA_TOKEN: ${{ secrets.EITAA_TOKEN }}
+          RUBIKA_TOKEN: ${{ secrets.RUBIKA_TOKEN }}
+        run: python send.py
